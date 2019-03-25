@@ -1,0 +1,9 @@
+El diagrama de clases entregado no refleja las relaciones entre las clases.
+Podés tener en cuenta esto: El jugador no debería ser quien inicie las oleadas. Estas deberían iniciar tras un tiempo, y no debería poder iniciar oleadas mientras no termine la que esté en curso.
+
+Funcionalidad: 3.0 / 3.0
+Diseño de software: 0.5 / 1.0
+Documentación: 0.5 /  0.5
+Requisitos funcionales: 0.5 / 0.5
+
+NOTA: 4.5 / 5.0
