@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Torres : MonoBehaviour {
     private GameObject enemigo;
-    private float UmbrualdeDistancia = 2.2f;
+    private float UmbraldeDistancia = 2.2f;
     [SerializeField]
     private GameObject disparo;
     private static float seg;
@@ -32,7 +32,7 @@ public class Torres : MonoBehaviour {
         foreach(Object item in objetivos)
         {
             temp = (GameObject)item;
-            if (Vector3.Distance(temp.transform.position, this.transform.position)<UmbrualdeDistancia)
+            if (Vector3.Distance(temp.transform.position, this.transform.position)<UmbraldeDistancia)
             {
                 return temp;
             }

@@ -5,11 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour {
 
-
-
     private void cargaNivel(string nombreNivel)
     {
         
         SceneManager.LoadScene(nombreNivel);
+    }
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 }

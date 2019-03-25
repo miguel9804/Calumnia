@@ -62,7 +62,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Programacion\Base.cs" />
-    <Compile Include="Assets\Programacion\Cerrar.cs" />
     <Compile Include="Assets\Programacion\Creditos.cs" />
     <Compile Include="Assets\Programacion\Destruir_Letrero.cs" />
     <Compile Include="Assets\Programacion\Enemigos.cs" />

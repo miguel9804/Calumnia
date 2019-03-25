@@ -10,20 +10,20 @@ public class Iglesia : MonoBehaviour
     private Transform creacion;
     [SerializeField]
     private float tiempo_aura;
-    public static float seg;
+    public static int seg;
     void Start()
     {
-        Iglesia.seg = 700f;
+        Iglesia.seg = 700;
     }
 
     
     void Update()
     {
         seg = 1 +seg;
-        //Debug.Log(seg);
-        if(Iglesia.seg>700f)
+        Debug.Log(seg);
+        if(Iglesia.seg>700)
         {
-            Iglesia.seg = 0f;
+            Iglesia.seg = 0;
             GameObject crear_aura = Instantiate(aura, creacion.position, creacion.rotation);
             Destroy(crear_aura.gameObject, tiempo_aura);
         }
