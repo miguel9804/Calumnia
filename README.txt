@@ -1,4 +1,4 @@
-MIGUEL ANGEL VARGAS JARAMILLO / 000242427 / Unity version 2018.3.10
+MIGUEL ANGEL VARGAS JARAMILLO / 000242427 / Unity version 2018.3.10f1
 
 CALUMNIA	
 Imagenes utilizadas: Casi todas por no decir todas las imagenes fueron sacadas de proyectos anteriores hechas por David Ballesteros y reutilizadas en este como bocetos.
