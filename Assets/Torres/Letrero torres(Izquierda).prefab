@@ -239,7 +239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fed88898a225d6d44b888cca8fa1d116, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  torre: {fileID: 6393421697317840160, guid: 72974c120cae8524fa50acb440a8dabf, type: 3}
+  torre: {fileID: 9001810319644585467, guid: 7c11275ca7c5ac845bc57d12a0909a4b, type: 3}
   y: 0
   x: 0.6
 --- !u!114 &4733440402738489325
