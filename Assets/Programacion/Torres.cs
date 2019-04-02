@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Torres : MonoBehaviour {
     private GameObject enemigo;
-    private float UmbraldeDistancia = 2.2f;
+    private float UmbraldeDistancia = 3f;
     [SerializeField]
     private GameObject disparo;
     private static float seg;
@@ -23,7 +23,8 @@ public class Torres : MonoBehaviour {
 
     void Start()
     {
-        Torres.seg=25f;
+        
+        Torres.seg=30f;
     }
     GameObject BuscarEnemigos()
     {
@@ -34,6 +35,7 @@ public class Torres : MonoBehaviour {
             temp = (GameObject)item;
             if (Vector3.Distance(temp.transform.position, this.transform.position)<UmbraldeDistancia)
             {
+                Debug.Log("Entro");
                 return temp;
             }
         }
@@ -52,13 +54,14 @@ public class Torres : MonoBehaviour {
     {
         seg += 1 + Time.deltaTime;
         Enemigo = BuscarEnemigos();
-        if(Torres.seg>25f)
+        if(Torres.seg>30f)
         {
             Torres.seg = 0f;
-            //Debug.Log("Entro");
+            
 
             if (Enemigo != null)
             {
+                
                 Disparar();
                 Debug.DrawLine(this.transform.position, enemigo.transform.position, Color.green);
 

@@ -14,7 +14,7 @@ public class Base : MonoBehaviour
         bas = GetComponent<Animator>();
         bas.SetInteger("Vida_Base", 0);
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    /*private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag.Equals(ENEMIGO))
         {
@@ -27,7 +27,7 @@ public class Base : MonoBehaviour
                 Destroy(this.gameObject);
             }
         }
-    }
+    }*/
     void FormaBase()
     {
         if(vidas<=75 && vidas>50)

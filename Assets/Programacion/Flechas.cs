@@ -8,10 +8,7 @@ public class Flechas : MonoBehaviour {
     private float speed = 5f;
    
     private const string ENEMIGO = "Enemigo";
-    // Use this for initialization
-    void Start () {
-        
-	}
+   
    
     private void OnTriggerEnter2D(Collider2D collision)
     {

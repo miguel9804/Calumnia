@@ -25,7 +25,7 @@ public class Iglesia : MonoBehaviour
         {
             Iglesia.seg = 0;
             GameObject crear_aura = Instantiate(aura, creacion.position, creacion.rotation);
-            Destroy(crear_aura.gameObject, tiempo_aura);
+            Destroy(crear_aura.gameObject,tiempo_aura);
         }
     }
 }

@@ -7,7 +7,7 @@ public class Moneda : MonoBehaviour {
     public GameObject centenas, decenas, unidades;
     private Animator ce, de, un;
     private string[] estado = { "Moneda_0", "Moneda_1", "Moneda_2", "Moneda_3", "Moneda_4", "Moneda_5", "Moneda_6", "Moneda_7", "Moneda_8", "Moneda_9" };
-    private float tiempoLimite = 30f;
+    private float tiempoLimite = 100f;
     private float tiempo = 0f;
     private int dinero = 0;
 
@@ -34,6 +34,9 @@ public class Moneda : MonoBehaviour {
 
 
     }
+    
+
+
 
     // Update is called once per frame
     void Update()
