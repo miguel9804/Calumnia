@@ -1,4 +1,4 @@
-MIGUEL ANGEL VARGAS JARAMILLO / 000242427
+MIGUEL ANGEL VARGAS JARAMILLO / 000242427 / Unity version 2018.3.10f1
 
 CALUMNIA	
 Imagenes utilizadas: Casi todas por no decir todas las imagenes fueron sacadas de proyectos anteriores hechas por David Ballesteros y reutilizadas en este como bocetos.
@@ -16,7 +16,7 @@ Imagenes utilizadas: Casi todas por no decir todas las imagenes fueron sacadas d
                         *Espantapajaros
                         *Torre arcos
                         *Iglesia
- +Nota: Las imagenes del proyecto y la animacion fueran hechas por David Ballesteros, compañero con el cual estoy llevando a cabo este proyecto.
+ +Nota: Las imagenes del proyecto y la animacion fueran hechas por David Ballesteros, compaÃ±ero con el cual estoy llevando a cabo este proyecto.
 Bugs: Hasta el momento no se han encontrado bugs significativos, algun que otro problema con la optimizacion de las oleadas, como por ejemplo en esta optamos que las oleadas aparecieran oprimiendo la tecla espacio pero al hacer esto el usuario puede crear todas las oleadas de inmediato y asi se pierde mucha experiencia en el juego.
      Se ha intentado que las oleadas aparezcan con un contador, pero ha dado algunos errores entonces para la entrega optamos por la forma del espacio aunque no sea la mejor.
 
