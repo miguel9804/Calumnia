@@ -7,16 +7,19 @@ public class Moneda : MonoBehaviour {
     public GameObject centenas, decenas, unidades;
     private Animator ce, de, un;
     private string[] estado = { "Moneda_0", "Moneda_1", "Moneda_2", "Moneda_3", "Moneda_4", "Moneda_5", "Moneda_6", "Moneda_7", "Moneda_8", "Moneda_9" };
-    private float tiempoLimite = 100f;
+    private float tiempoLimite = 50f;
     private float tiempo = 0f;
-    private int dinero = 0;
+    private int dinero;
+    private bool compro;
+    private static Moneda instancia;
+    
 
     public int Dinero
     {
-        get
-        {
+         get
+         {
             return dinero;
-        }
+         }
 
         set
         {
@@ -24,30 +27,69 @@ public class Moneda : MonoBehaviour {
         }
     }
 
+    public bool Compro
+    {
+        get
+        {
+            return compro;
+        }
+
+        set
+        {
+            compro = value;
+        }
+    }
+
+    public static Moneda Instancia
+    {
+        get
+        {
+            return instancia;
+        }
+
+        set
+        {
+            instancia = value;
+        }
+    }
+
+
+
+
     // Use this for initialization
     void Start()
     {
+        Instancia = this;
         ce = centenas.GetComponent<Animator>();
         de = decenas.GetComponent<Animator>();
         un = unidades.GetComponent<Animator>();
+        Instancia.Dinero = 500;
 
-
-
+        ActualizadorContador(Instancia.Dinero);
     }
     
 
-
+   
 
     // Update is called once per frame
     void Update()
     {
-        tiempo++;
-        if (tiempo > tiempoLimite)
-        {
-            dinero++;
-            ActualizadorContador(dinero);
+
+        
+        
+         if(Instancia.Compro==true)
+         {
+            ActualizadorContador(Instancia.Dinero);
+            tiempo++;
+           if (tiempo > tiempoLimite)
+           {
+
+            Instancia.Dinero ++; 
+            ActualizadorContador(Instancia.Dinero);
             tiempo = 0;
-        }
+           }
+         }
+
 
     }
     public void ActualizadorContador(int numero)

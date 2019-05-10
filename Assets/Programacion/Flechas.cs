@@ -23,16 +23,20 @@ public class Flechas : MonoBehaviour {
         objetivo = torre.Enemigo;
     }
     // Update is called once per frame
-    void Update () {
-        
-        Vector3 direccion;
-       
-            if (objetivo != null)
-            {
-                direccion = objetivo.transform.position - this.transform.position;
-                this.transform.position += speed * direccion * Time.deltaTime;
-                Destroy(this.gameObject, disparoLife);
+    void Update() {
 
+        Vector3 direccion;
+
+        if (objetivo != null)
+        {
+            direccion = objetivo.transform.position - this.transform.position;
+            this.transform.position += speed * direccion * Time.deltaTime;
+            
+            Destroy(this.gameObject, disparoLife);
+        }
+            else if(objetivo == null)
+            {
+              Destroy(this.gameObject);
             }
 
 	}

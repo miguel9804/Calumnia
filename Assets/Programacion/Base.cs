@@ -7,28 +7,28 @@ public class Base : MonoBehaviour
 {
     private const string ENEMIGO = "Enemigo";
     private int vidas = 100;
-    private Animator bas;
+    //private Animator bas;
 
     private void Start()
     {
-        bas = GetComponent<Animator>();
-        bas.SetInteger("Vida_Base", 0);
+        //bas = GetComponent<Animator>();
+       // bas.SetInteger("Vida_Base", 0);
     }
-    /*private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag.Equals(ENEMIGO))
         {
             
             vidas = vidas - 10;
             Debug.Log(vidas);
-            FormaBase();
+            //FormaBase();
             if(vidas<=0)
             {
                 Destroy(this.gameObject);
             }
         }
-    }*/
-    void FormaBase()
+    }
+   /* void FormaBase()
     {
         if(vidas<=75 && vidas>50)
         {
@@ -54,5 +54,5 @@ public class Base : MonoBehaviour
         {
             SceneManager.LoadScene("Game over");
         }
-    }
+    }*/
 }

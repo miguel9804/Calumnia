@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 6624608420499156416}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -26.639, y: -11.304, z: -1.78}
-  m_LocalScale: {x: 0.133214, y: 0.133214, z: 1}
+  m_LocalScale: {x: 0.1230897, y: 0.1230897, z: 0.1230897}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -154,5 +154,3 @@ MonoBehaviour:
   ruta: {fileID: 708343711064160791, guid: 637d588fcce30c143ac8872c071e4339, type: 3}
   vel: 2.2
   vida: 20
-  cementerio: {fileID: 5178511966072501172, guid: 9052bfd47dc131a4bba8210415a0e773,
-    type: 3}

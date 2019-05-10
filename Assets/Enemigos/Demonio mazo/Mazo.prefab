@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 1491743841606956486}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -23.22, y: -1.54, z: 0}
-  m_LocalScale: {x: 0.19156513, y: 0.19156513, z: 0.19156513}
+  m_LocalScale: {x: 0.1684371, y: 0.1684371, z: 0.1684371}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 4fd3aa3639c8e6b468eb33d2db6fff35, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -164,5 +164,3 @@ MonoBehaviour:
   ruta: {fileID: 708343711064160791, guid: 637d588fcce30c143ac8872c071e4339, type: 3}
   vel: 1.5
   vida: 25
-  cementerio: {fileID: 5178511966072501172, guid: 9052bfd47dc131a4bba8210415a0e773,
-    type: 3}

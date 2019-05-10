@@ -61,16 +61,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Programacion\Barrera.cs" />
     <Compile Include="Assets\Programacion\Base.cs" />
     <Compile Include="Assets\Programacion\Creditos.cs" />
-    <Compile Include="Assets\Programacion\Destruir_Letrero.cs" />
     <Compile Include="Assets\Programacion\Enemigos.cs" />
     <Compile Include="Assets\Programacion\Flechas.cs" />
     <Compile Include="Assets\Programacion\Iglesia.cs" />
     <Compile Include="Assets\Programacion\LevelManager.cs" />
     <Compile Include="Assets\Programacion\LogicaTorres.cs" />
     <Compile Include="Assets\Programacion\Moneda.cs" />
+    <Compile Include="Assets\Programacion\Obstaculo.cs" />
     <Compile Include="Assets\Programacion\Oleadas.cs" />
+    <Compile Include="Assets\Programacion\Padre.cs" />
+    <Compile Include="Assets\Programacion\T_Arcos.cs" />
+    <Compile Include="Assets\Programacion\T_Barrera.cs" />
+    <Compile Include="Assets\Programacion\T_Iglesia.cs" />
+    <Compile Include="Assets\Programacion\T_Letrero.cs" />
     <Compile Include="Assets\Programacion\Torres.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/migue/Desktop/Universidad/Programacion/Juego/Calumnia/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>

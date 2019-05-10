@@ -92,4 +92,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60dd12528ff9e6f4d83d16169c82f50a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  disparo: {fileID: 1714952457473936, guid: 05f5f6eb333d07049b564af772ec4f85, type: 3}
+  disparo: {fileID: 4675439866371269110, guid: 34f71725646080f4a953efd871e7cb17, type: 3}

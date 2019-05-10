@@ -10,22 +10,81 @@ public class Iglesia : MonoBehaviour
     private Transform creacion;
     [SerializeField]
     private float tiempo_aura;
-    public static int seg;
-    void Start()
-    {
-        Iglesia.seg = 700;
-    }
+    private static Iglesia instancia;
+    private bool activar;
+    private bool activo;
+    private float seg;
+    private const string ENEMIGO = "Enemigo";
 
-    
-    void Update()
+  
+
+    public static Iglesia Instancia
     {
-        seg = 1 +seg;
-        Debug.Log(seg);
-        if(Iglesia.seg>700)
+        get
         {
-            Iglesia.seg = 0;
-            GameObject crear_aura = Instantiate(aura, creacion.position, creacion.rotation);
-            Destroy(crear_aura.gameObject,tiempo_aura);
+            return instancia;
+        }
+
+        set
+        {
+            instancia = value;
         }
     }
+
+    public  bool Activo
+    {
+        get
+        {
+            return activo;
+        }
+        private set
+        {
+            activo = value;
+        }
+    }
+
+    private void Start()
+    {
+        seg = 10f;
+        Instancia = this;
+    }
+    void Update()
+    {
+        
+        seg += 1f * Time.deltaTime;
+        if(seg >5f)
+        {
+           Activo = false;
+        }
+        if (seg > 10f)
+        {
+            activar = true;
+        }
+        else
+        {
+           activar = false;
+        }
+
+    }
+    private void ActivarAura()
+    {
+        GameObject crear_aura = Instantiate(aura, creacion.position, creacion.rotation);
+        
+        Destroy(crear_aura.gameObject, tiempo_aura);
+
+    }
+  
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag.Equals(ENEMIGO))
+        {
+            if(activar == true)
+            {
+                Activo = true;
+                ActivarAura();
+                seg = 0f;
+            }
+        }
+    }
+   
 }

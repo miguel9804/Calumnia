@@ -1,12 +1,14 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
 
 public class Torres : MonoBehaviour {
     private GameObject enemigo;
     private float UmbraldeDistancia = 3f;
     [SerializeField]
     private GameObject disparo;
-    private static float seg;
+    private  float seg;
 
     public GameObject Enemigo
     {
@@ -24,18 +26,18 @@ public class Torres : MonoBehaviour {
     void Start()
     {
         
-        Torres.seg=30f;
+        seg=30f;
     }
     GameObject BuscarEnemigos()
     {
-        ArrayList objetivos = Oleadas.enemigos;
+        List<GameObject> objetivos = Oleadas.Enemigos;
         GameObject temp;
         foreach(Object item in objetivos)
         {
             temp = (GameObject)item;
             if (Vector3.Distance(temp.transform.position, this.transform.position)<UmbraldeDistancia)
             {
-                Debug.Log("Entro");
+                
                 return temp;
             }
         }
@@ -54,15 +56,16 @@ public class Torres : MonoBehaviour {
     {
         seg += 1 + Time.deltaTime;
         Enemigo = BuscarEnemigos();
-        if(Torres.seg>30f)
+        if(seg>30f)
         {
-            Torres.seg = 0f;
+            seg = 0f;
             
 
             if (Enemigo != null)
             {
-                
+
                 Disparar();
+                //Debug.Log("Disparo");
                 Debug.DrawLine(this.transform.position, enemigo.transform.position, Color.green);
 
             }

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Oleadas : MonoBehaviour {
-    public static ArrayList enemigos = new ArrayList();
+    private static List<GameObject> enemigos = new List<GameObject>();
     [SerializeField]
     private GameObject enemigo1;
     [SerializeField]
@@ -15,10 +15,24 @@ public class Oleadas : MonoBehaviour {
     private Transform spawn;
     private int waves = 5;
     private int contador = 0;
-    private int terminar_nivel;
-    [SerializeField]
-    private GameObject space;
-    
+    private static int seg = 0;
+    private static int inicio_oleada = 100;
+   
+
+   
+    public static List<GameObject> Enemigos
+    {
+        get
+        {
+            return enemigos;
+        }
+
+        set
+        {
+            enemigos = value;
+        }
+    }
+
     void Oleada1()
     {
         GameObject temp;
@@ -29,7 +43,7 @@ public class Oleadas : MonoBehaviour {
         {
             temp = Instantiate(enemigo1, pos_inicial + incremento, Quaternion.identity);
             pos_inicial = temp.transform.position;
-            enemigos.Add(temp);
+            Enemigos.Add(temp);
         }
             
         
@@ -43,7 +57,7 @@ public class Oleadas : MonoBehaviour {
         {
             temp = Instantiate(enemigo1, pos_inicial + incremento, Quaternion.identity);
             pos_inicial = temp.transform.position;
-            enemigos.Add(temp);
+            Enemigos.Add(temp);
         }
     }
     void Oleada3()
@@ -56,12 +70,12 @@ public class Oleadas : MonoBehaviour {
         {
             temp = Instantiate(enemigo1, pos_inicial + incremento, Quaternion.identity);
             pos_inicial = temp.transform.position;
-            enemigos.Add(temp);
+            Enemigos.Add(temp);
             if (i>=2)
             {
                 temp2 = Instantiate(enemigo2, pos_inicial + incremento, Quaternion.identity);
                 pos_inicial = temp2.transform.position;
-                enemigos.Add(temp2);
+                Enemigos.Add(temp2);
             }
 
         }
@@ -77,12 +91,12 @@ public class Oleadas : MonoBehaviour {
         {
             temp = Instantiate(enemigo1, pos_inicial + incremento, Quaternion.identity);
             pos_inicial = temp.transform.position;
-            enemigos.Add(temp);
+            Enemigos.Add(temp);
             if (i >= 3)
             {
                 temp2 = Instantiate(enemigo2, pos_inicial + incremento, Quaternion.identity);
                 pos_inicial = temp2.transform.position;
-                enemigos.Add(temp2);
+                Enemigos.Add(temp2);
             }
 
         }
@@ -99,70 +113,79 @@ public class Oleadas : MonoBehaviour {
         {
             temp = Instantiate(enemigo1, pos_inicial + incremento, Quaternion.identity);
             pos_inicial = temp.transform.position;
-            enemigos.Add(temp);
+            Enemigos.Add(temp);
             if (i >= 2)
             {
                 temp2 = Instantiate(enemigo2, pos_inicial + incremento, Quaternion.identity);
                 pos_inicial = temp2.transform.position;
-                enemigos.Add(temp2);
+                Enemigos.Add(temp2);
                 
             }
             if (i == 3)
             {
                 temp3 = Instantiate(enemigo3, pos_inicial + incremento, Quaternion.identity);
                 pos_inicial = temp3.transform.position;
-                enemigos.Add(temp3);
+                Enemigos.Add(temp3);
             }
 
 
         }
 
     }
-
+    
 
 
     // Update is called once per frame
     void Update () {
-
-        if(Input.GetKeyDown(KeyCode.Space))
+        
+        if(Moneda.Instancia.Compro==true || Input.GetKey(KeyCode.Space))
         {
-            contador++;
-            terminar_nivel++;
-            Debug.Log(contador);
-            Destroy(space.gameObject);
-            if (contador == 1)
+            if (Enemigos.Count == 0)
             {
-                Oleada1();
-                
+                seg += 1;
+                Debug.Log(seg);
+
+                if (seg > inicio_oleada)
+                {
+                    contador++;
+                    seg = 0;
+                    if (contador == 1)
+                    {
+                        Oleada5();
+                        Debug.Log("Oleada 1");
+
+                    }
+                    else if (contador == 2)
+                    {
+                        Oleada2();
+                        Debug.Log("Oleada 2");
+                    }
+                    else if (contador == 3)
+                    {
+                        Oleada3();
+                        Debug.Log("Oleada 3");
+                    }
+                    else if (contador == 4)
+                    {
+                        Oleada4();
+                        Debug.Log("Oleada 4");
+                    }
+                    else if (contador == 5)
+                    {
+                        Oleada5();
+                        Debug.Log("Oleada 5");
+                    }
+                    if (contador > waves)
+                    {
+                        SceneManager.LoadScene("Ganar");
+                    }
+
+                }
+
             }
-            else if (contador == 2)
-            {
-                Oleada2();
-                
-            }
-            else if (contador == 3)
-            {
-                Oleada3();
-                
-            }
-            else if (contador == 4)
-            {
-                Oleada4();
-                
-            }
-            else if ( contador==5)
-            {
-                Oleada5();
-            }
-             if (terminar_nivel > waves)
-             {
-                    SceneManager.LoadScene("Ganar");
-             }
-            
-            
-            
         }
+       
         
-        
-	}
+
+    }
 }
