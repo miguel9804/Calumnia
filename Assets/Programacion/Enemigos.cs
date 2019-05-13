@@ -2,99 +2,69 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemigos : MonoBehaviour
+public abstract class Enemigos : MonoBehaviour
 {
-    public GameObject ruta;
-    private int indice;
-    private Vector3 pos_siguiente;
-    public float vel;
-    private float dis_punto = 0.5f ;
     [SerializeField]
+    protected GameObject ruta;
+    protected int indice;
+    protected Vector3 pos_siguiente;
+    protected float dis_punto = 0.5f;
     private float vida;
-    private const string FLECHA = "Flecha";
-    private const string BASE = "Base";
-    private const string AURA = "Aura";
-    
-    
-  
-    
+    [SerializeField]
+    protected float vel;
+    protected bool ataque;
+    protected int daño;
+    protected Barrera barrera;
+    protected float tiempo_ataque;
+    protected float seg;
+    protected float seg_barr;
+    protected bool barr_frente;
+    //protected Animator anim;
+    protected const string FLECHA = "Flecha";
+    protected const string BASE = "Base";
+    protected const string AURA = "Aura";
 
-    void Start()
+    public float Vida
     {
+        get
+        {
+            return vida;
+        }
+
+        set
+        {
+            vida = value;
+        }
+    }
+
+    protected void Awake()
+    {
+        //anim = GetComponent<Animator>();
+        seg = 0;
+        seg_barr = 0;
+        ataque = false;
         pos_siguiente = ruta.transform.GetChild(0).position;
-       
     }
+    protected abstract void Start();
 
 
 
-    void Update()
-    {
-       
-        Vector3 dir = pos_siguiente - this.transform.position;
-        this.transform.position += dir * vel * Time.deltaTime;
-        //this.transform.position = this.transform.position+("")
-  
-            if (dir.magnitude <= dis_punto)
-            {
-                if (indice + 1 < ruta.transform.childCount)
-                {
-                    indice++;
-                    pos_siguiente = ruta.transform.GetChild(indice).position;
-                    //Debug.Log("xs= " + pos_siguiente.x + ", ys= " + pos_siguiente.y);
-                }
-                else
-                {
-                    indice = 0;
-                    this.transform.position = pos_siguiente;
-                    pos_siguiente = ruta.transform.GetChild(0).position;
-                }
-            }
-       
-        
-    }
-    void Muerte()
-    {
-        Oleadas.Enemigos.Remove(this.gameObject);
-        Destroy(this.gameObject);
-       
-    }
+    protected abstract void Update();
+
+    protected abstract void Muerte();
+
+
+    protected abstract void OnTriggerEnter2D(Collider2D collision);
     
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag.Equals(FLECHA))
-        {
 
-            Debug.Log("La vida es: " + vida);
-            vida = vida - 2f;
-            if (vida <= 0)
-            {
-                
-                Muerte();
-                
-            }
-        }
-        
-        if (collision.gameObject.tag.Equals(BASE))
-        {
-            
-            Muerte();
-        }
-        
-    }
-    private void OnTriggerStay2D(Collider2D collision)
+    protected  void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag.Equals(AURA))
         {
-
-                vida = vida-0.1f;
-                Debug.Log("Daño aura, La vida es:" + vida);
-                if (vida <= 0)
-                {
-                    Muerte();
-                }
-
+            Vida = Vida - 0.1f;
         }
     }
-
+    protected abstract void OnTriggerExit2D(Collider2D collision);
+  
 
 }

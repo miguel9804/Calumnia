@@ -63,7 +63,7 @@ public class Moneda : MonoBehaviour {
         ce = centenas.GetComponent<Animator>();
         de = decenas.GetComponent<Animator>();
         un = unidades.GetComponent<Animator>();
-        Instancia.Dinero = 500;
+        Instancia.Dinero = 100;
 
         ActualizadorContador(Instancia.Dinero);
     }

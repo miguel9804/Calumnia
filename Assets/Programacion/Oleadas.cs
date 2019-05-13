@@ -41,7 +41,7 @@ public class Oleadas : MonoBehaviour {
         Vector3 n = new Vector3(0, -10);
         for(int i=0;i<2;i++)
         {
-            temp = Instantiate(enemigo1, pos_inicial + incremento, Quaternion.identity);
+            temp = Instantiate(enemigo2, pos_inicial + incremento, Quaternion.identity);
             pos_inicial = temp.transform.position;
             Enemigos.Add(temp);
         }
@@ -151,7 +151,7 @@ public class Oleadas : MonoBehaviour {
                     seg = 0;
                     if (contador == 1)
                     {
-                        Oleada5();
+                        Oleada1();
                         Debug.Log("Oleada 1");
 
                     }

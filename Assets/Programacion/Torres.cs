@@ -8,6 +8,7 @@ public class Torres : MonoBehaviour {
     private float UmbraldeDistancia = 3f;
     [SerializeField]
     private GameObject disparo;
+    private List<GameObject> numero_flechas;
     private  float seg;
 
     public GameObject Enemigo
@@ -23,10 +24,23 @@ public class Torres : MonoBehaviour {
         }
     }
 
+    public List<GameObject> Numero_flechas
+    {
+        get
+        {
+            return numero_flechas;
+        }
+
+        set
+        {
+            numero_flechas = value;
+        }
+    }
+
     void Start()
     {
-        
-        seg=30f;
+        Lista_Flechas();
+        seg=0.5f;
     }
     GameObject BuscarEnemigos()
     {
@@ -35,18 +49,52 @@ public class Torres : MonoBehaviour {
         foreach(Object item in objetivos)
         {
             temp = (GameObject)item;
-            if (Vector3.Distance(temp.transform.position, this.transform.position)<UmbraldeDistancia)
+            if (Vector3.Distance(temp.transform.position, this.transform.position) < UmbraldeDistancia)
             {
-                
                 return temp;
             }
         }
         return null;
     }
-    void Disparar()
+    private void Lista_Flechas()
+    {
+        Numero_flechas = new List<GameObject>();
+        for(int i=0;i<5;i++)
+        {
+            Agregar_Flechas();
+        }
+    }
+    public void Agregar_Flechas()
     {
         GameObject obj = Instantiate(disparo, this.transform.position, Quaternion.identity);
-        Flechas flecha = obj.GetComponent<Flechas>();
+        obj.gameObject.SetActive(false);
+        Numero_flechas.Add(obj);
+    }
+    public void Reciclar_Flechas(GameObject flechas)
+    {
+        flechas.gameObject.SetActive(false);
+        Numero_flechas.Add(flechas);
+    }
+    public GameObject Activar_Flechas()
+    {
+        GameObject obj = Numero_flechas[Numero_flechas.Count - 1];
+        Numero_flechas.RemoveAt(Numero_flechas.Count - 1);
+        obj.gameObject.SetActive(true);
+        return obj;
+
+    }
+
+    public GameObject Obtener_Flecha()
+    {
+       if(Numero_flechas.Count==0)
+        {
+            Agregar_Flechas();
+        }
+        return Activar_Flechas();
+    }
+    void Disparar()
+    {
+        Flechas flecha = Obtener_Flecha().GetComponent<Flechas>();
         flecha.ActivarFlecha(this);
     }
     
@@ -54,18 +102,14 @@ public class Torres : MonoBehaviour {
     void Update()
         
     {
-        seg += 1 + Time.deltaTime;
+        seg += 1 * Time.deltaTime;
         Enemigo = BuscarEnemigos();
-        if(seg>30f)
+        if(seg>0.5f)
         {
             seg = 0f;
-            
-
             if (Enemigo != null)
             {
-
                 Disparar();
-                //Debug.Log("Disparo");
                 Debug.DrawLine(this.transform.position, enemigo.transform.position, Color.green);
 
             }

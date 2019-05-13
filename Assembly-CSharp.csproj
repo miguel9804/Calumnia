@@ -61,14 +61,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Programacion\Barra_Base.cs" />
+    <Compile Include="Assets\Programacion\Barra_DR.cs" />
+    <Compile Include="Assets\Programacion\Barra_DRH.cs" />
+    <Compile Include="Assets\Programacion\Barra_ES.cs" />
+    <Compile Include="Assets\Programacion\Barra_MZ.cs" />
+    <Compile Include="Assets\Programacion\Barra_Vida.cs" />
     <Compile Include="Assets\Programacion\Barrera.cs" />
     <Compile Include="Assets\Programacion\Base.cs" />
     <Compile Include="Assets\Programacion\Creditos.cs" />
+    <Compile Include="Assets\Programacion\Demonio_Rapido.cs" />
+    <Compile Include="Assets\Programacion\Demonio_RapidoH.cs" />
     <Compile Include="Assets\Programacion\Enemigos.cs" />
+    <Compile Include="Assets\Programacion\Espantapajaros.cs" />
     <Compile Include="Assets\Programacion\Flechas.cs" />
     <Compile Include="Assets\Programacion\Iglesia.cs" />
     <Compile Include="Assets\Programacion\LevelManager.cs" />
     <Compile Include="Assets\Programacion\LogicaTorres.cs" />
+    <Compile Include="Assets\Programacion\Mazo.cs" />
     <Compile Include="Assets\Programacion\Moneda.cs" />
     <Compile Include="Assets\Programacion\Obstaculo.cs" />
     <Compile Include="Assets\Programacion\Oleadas.cs" />

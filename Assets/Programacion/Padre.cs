@@ -2,22 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class Padre : MonoBehaviour
 {
-    private Animator anim;
- 
 
-    // Start is called before the first frame update
+    private Iglesia iglesia;
+    [SerializeField]
+    private GameObject igl;
+    private Animator anim;
+
     void Start()
     {
-        
+        iglesia = igl.GetComponent<Iglesia>();
         anim = GetComponent<Animator>();
     }
-
-    // Update is called once per frame
     void Update()
     {
-        if(Iglesia.Instancia.Activo == true)
+        if (iglesia.Activo == true)
         {
             anim.SetBool("Ataque", true);
         }
@@ -25,6 +27,10 @@ public class Padre : MonoBehaviour
         {
             anim.SetBool("Ataque", false);
         }
-
     }
+   
+
+
+   
+   
 }

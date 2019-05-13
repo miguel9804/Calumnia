@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 5480035199442539892}
   m_Layer: 0
   m_Name: Iglesia(Aura al lado de)
-  m_TagString: Untagged
+  m_TagString: Iglesia
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -211,6 +211,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1630611662796628673, guid: 59126db7810bd554f9370e91cc6ee52a,
+        type: 3}
+      propertyPath: igl
+      value: 
+      objectReference: {fileID: 112856930553628783}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59126db7810bd554f9370e91cc6ee52a, type: 3}
 --- !u!4 &7550306042508843533 stripped

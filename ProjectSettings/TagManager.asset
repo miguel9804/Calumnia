@@ -8,6 +8,15 @@ TagManager:
   - Flecha
   - Base
   - Aura
+  - Iglesia
+  - Barrera
+  - Padre
+  - Demonio rapido
+  - Parar_DR
+  - Parar_ES
+  - Parar_MZ
+  - Cambio_Direccion
+  - Arco
   layers:
   - Default
   - TransparentFX

@@ -3,20 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Flechas : MonoBehaviour {
+    private Torres torres;
+    [SerializeField]
+    private GameObject torr;
     private GameObject objetivo;
-    private float disparoLife = 2f;
+    private float disparoLife = 1.5f;
+    private float seg;
     private float speed = 5f;
-   
     private const string ENEMIGO = "Enemigo";
-   
-   
+
+    private void Start()
+    {
+       torres = torr.GetComponent<Torres>();
+        seg=0f;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag.Equals(ENEMIGO))
+        if(collision.gameObject.tag.Equals("Enemigo")|| collision.gameObject.tag.Equals("Demonio rapido"))
         {
-            //Debug.Log("Ataco al enemigo");
-            Destroy(this.gameObject);
+            torres.Reciclar_Flechas(this.gameObject);
+         
         }
+
+        
     }
     public void ActivarFlecha(Torres torre)
     {
@@ -29,15 +39,22 @@ public class Flechas : MonoBehaviour {
 
         if (objetivo != null)
         {
+            seg += 1f * Time.deltaTime;
             direccion = objetivo.transform.position - this.transform.position;
             this.transform.position += speed * direccion * Time.deltaTime;
             
-            Destroy(this.gameObject, disparoLife);
-        }
-            else if(objetivo == null)
+            if (seg>disparoLife)
             {
-              Destroy(this.gameObject);
+                torres.Reciclar_Flechas(this.gameObject);
+                seg = 0;
             }
+            
+        }
+        else if (objetivo == null)
+        {
+            torres.Reciclar_Flechas(this.gameObject);
+        }
 
-	}
+
+    }
 }

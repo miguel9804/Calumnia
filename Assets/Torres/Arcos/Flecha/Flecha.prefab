@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 4675439866371269066}
   - component: {fileID: 4675439866371269109}
   - component: {fileID: 5557777932462210456}
+  - component: {fileID: 6142900180027376635}
   m_Layer: 0
   m_Name: Flecha
-  m_TagString: Untagged
+  m_TagString: Flecha
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -139,3 +140,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45c8f3d9cecc7654db3b0163a9606054, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flechas: {fileID: 4675439866371269110}
+  torr: {fileID: 9001810319644585467, guid: 7c11275ca7c5ac845bc57d12a0909a4b, type: 3}
+--- !u!50 &6142900180027376635
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4675439866371269110}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 3
