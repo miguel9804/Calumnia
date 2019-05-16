@@ -1,9 +1,10 @@
 Win64
 PlayerPath?
-C:/Users/migue/Desktop/Universidad/Programacion/Juego/Calumnia/Calumnia.exe
+C:/Users/migue/Desktop/Universidad/Programacion/Juego/Ejecutable/Calumnia.exe
 SceneListBegin?
 Assets/Niveles/Menu.unity
-Assets/Niveles/NivelPrueba.unity
+Assets/Niveles/Mapa.unity
+Assets/Niveles/Nivel 1.unity
 Assets/Niveles/Creditos.unity
 Assets/Niveles/Game over.unity
 Assets/Niveles/Ganar.unity
@@ -60,8 +61,6 @@ fc108ce7d98c40ac0907e8ca7f500c76 UnityEngine.UI.dll:UnityEngine.UI.Text
 abf1930d8126d0b2e00e9449129a0190 UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 64e54c0cbb0177c5ea26f340efb9ff85 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
 98ad81e9f689a492509f07e75b810aaa Unity.TextMeshPro.dll:TMPro.TMP_InputField
-71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Advertisements.dll:UnityEngine.Advertisements.CallbackExecutor
-71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Advertisements.dll:UnityEngine.Advertisements.Editor.Placeholder
 a7e614f864ffb8d013fbc711a1af6209 Assembly-CSharp.dll:.Torres
 cf9f5cf2c3145a37ac07f00e50e460f9 UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
@@ -186,3 +185,4 @@ c6666661329916e218bee7f5e79e60f5 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.Barrera
 8649814970b42d345b89944b862453cc Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
 c0714391765885ab1e9932bdd8e57699 Assembly-CSharp.dll:.Demonio_RapidoH
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.Letrero_Inicio

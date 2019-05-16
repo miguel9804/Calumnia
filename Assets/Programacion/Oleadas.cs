@@ -15,8 +15,8 @@ public class Oleadas : MonoBehaviour {
     private Transform spawn;
     private int waves = 5;
     private int contador = 0;
-    private static int seg = 0;
-    private static int inicio_oleada = 100;
+    private float seg = 0f;
+    private  float inicio_oleada = 3f;
    
 
    
@@ -41,7 +41,7 @@ public class Oleadas : MonoBehaviour {
         Vector3 n = new Vector3(0, -10);
         for(int i=0;i<2;i++)
         {
-            temp = Instantiate(enemigo2, pos_inicial + incremento, Quaternion.identity);
+            temp = Instantiate(enemigo1, pos_inicial + incremento, Quaternion.identity);
             pos_inicial = temp.transform.position;
             Enemigos.Add(temp);
         }
@@ -142,8 +142,7 @@ public class Oleadas : MonoBehaviour {
         {
             if (Enemigos.Count == 0)
             {
-                seg += 1;
-                Debug.Log(seg);
+                seg += 1f * Time.deltaTime;
 
                 if (seg > inicio_oleada)
                 {
@@ -151,29 +150,28 @@ public class Oleadas : MonoBehaviour {
                     seg = 0;
                     if (contador == 1)
                     {
-                        Oleada1();
-                        Debug.Log("Oleada 1");
+                        Oleada1();                       
 
                     }
                     else if (contador == 2)
                     {
                         Oleada2();
-                        Debug.Log("Oleada 2");
+                        
                     }
                     else if (contador == 3)
                     {
                         Oleada3();
-                        Debug.Log("Oleada 3");
+                        
                     }
                     else if (contador == 4)
                     {
                         Oleada4();
-                        Debug.Log("Oleada 4");
+                        
                     }
                     else if (contador == 5)
                     {
                         Oleada5();
-                        Debug.Log("Oleada 5");
+                        
                     }
                     if (contador > waves)
                     {

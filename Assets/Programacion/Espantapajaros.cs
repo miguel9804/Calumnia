@@ -69,6 +69,7 @@ public class Espantapajaros : Enemigos
         if (Vida <= 0)
         {
             Muerte();
+            Moneda.Instancia.Dinero += 5;
 
         }
 

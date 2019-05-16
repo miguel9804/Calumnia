@@ -76,6 +76,7 @@
     <Compile Include="Assets\Programacion\Espantapajaros.cs" />
     <Compile Include="Assets\Programacion\Flechas.cs" />
     <Compile Include="Assets\Programacion\Iglesia.cs" />
+    <Compile Include="Assets\Programacion\Letrero_Inicio.cs" />
     <Compile Include="Assets\Programacion\LevelManager.cs" />
     <Compile Include="Assets\Programacion\LogicaTorres.cs" />
     <Compile Include="Assets\Programacion\Mazo.cs" />

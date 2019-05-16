@@ -13,6 +13,6 @@ public abstract class  LogicaTorres : MonoBehaviour {
     protected float x;
     
 
-    public abstract void OnMouseDown();
+    protected abstract void OnMouseDown();
     
 }

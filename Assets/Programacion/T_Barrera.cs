@@ -7,11 +7,11 @@ public class T_Barrera : LogicaTorres
     [SerializeField]
     private GameObject letrero;
 
-    public override void OnMouseDown()
+    protected override void OnMouseDown()
     {
-        if (Moneda.Instancia.Dinero >= 60)
+        if (Moneda.Instancia.Dinero >= 40)
         {
-            Moneda.Instancia.Dinero -= 60;
+            Moneda.Instancia.Dinero -= 40;
 
             Moneda.Instancia.Compro = true;
             GameObject temp;

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class T_Letrero : LogicaTorres
 {
-    public override void OnMouseDown()
+    protected override void OnMouseDown()
     {
         GameObject temp;
         Vector3 pos = this.transform.position;

@@ -7,12 +7,12 @@ public class T_Iglesia : LogicaTorres
     [SerializeField]
     private GameObject letrero;
 
-    public override void OnMouseDown()
+    protected override void OnMouseDown()
     {
-        if (Moneda.Instancia.Dinero >= 75)
+        if (Moneda.Instancia.Dinero >= 60)
         {
            
-            Moneda.Instancia.Dinero -= 75;
+            Moneda.Instancia.Dinero -= 60;
             Moneda.Instancia.Compro = true;
             GameObject temp;
             Vector3 pos = this.transform.position;

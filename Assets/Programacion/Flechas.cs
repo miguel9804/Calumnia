@@ -32,7 +32,6 @@ public class Flechas : MonoBehaviour {
     {
         objetivo = torre.Enemigo;
     }
-    // Update is called once per frame
     void Update() {
 
         Vector3 direccion;

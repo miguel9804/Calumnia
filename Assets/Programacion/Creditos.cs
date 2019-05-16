@@ -5,13 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class Creditos : MonoBehaviour
 {
-    private static int seg;
+    private static float seg;
 
     // Update is called once per frame
     void Update()
     {
-        seg = 1 + seg;
-        if(seg>80)
+        seg += 1f * Time.deltaTime;
+        if(seg>5f)
         {
             SceneManager.LoadScene("Creditos");
         }

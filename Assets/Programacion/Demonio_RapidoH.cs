@@ -36,6 +36,7 @@ public class Demonio_RapidoH : Enemigos
         if (Vida <= 0)
         {
             Muerte();
+            Moneda.Instancia.Dinero+=1;
 
         }
 

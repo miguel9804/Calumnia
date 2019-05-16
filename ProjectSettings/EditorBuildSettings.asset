@@ -9,7 +9,10 @@ EditorBuildSettings:
     path: Assets/Niveles/Menu.unity
     guid: 5f62c3790a2019b4e9ab88d4844a3815
   - enabled: 1
-    path: Assets/Niveles/NivelPrueba.unity
+    path: Assets/Niveles/Mapa.unity
+    guid: 52433c7ef99c3cc45bc315eabc4c3392
+  - enabled: 1
+    path: Assets/Niveles/Nivel 1.unity
     guid: de66de638227681498b0ba7659fc9d65
   - enabled: 1
     path: Assets/Niveles/Creditos.unity

@@ -140,7 +140,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45c8f3d9cecc7654db3b0163a9606054, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flechas: {fileID: 4675439866371269110}
   torr: {fileID: 9001810319644585467, guid: 7c11275ca7c5ac845bc57d12a0909a4b, type: 3}
 --- !u!50 &6142900180027376635
 Rigidbody2D:

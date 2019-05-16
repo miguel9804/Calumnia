@@ -61,8 +61,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   torre: {fileID: 9001810319644585467, guid: 7c11275ca7c5ac845bc57d12a0909a4b, type: 3}
-  y: -0.1
-  x: 0.4
+  y: -0.3
+  x: 0.8
   letrero: {fileID: 3961999456136388001}
 --- !u!1 &3961999456136388001
 GameObject:
@@ -90,7 +90,7 @@ Transform:
   m_GameObject: {fileID: 3961999456136388001}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 9.16, y: -0.95, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1967729870268021540}
   - {fileID: 4789441319554994922}
@@ -207,8 +207,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   torre: {fileID: 3380448939333197938, guid: a18621a4d1b260d4ca68e8a0f63a30dc, type: 3}
-  y: -0.2
-  x: 0.05
+  y: -0.5
+  x: 0
   letrero: {fileID: 3961999456136388001}
 --- !u!1 &8965841388340497729
 GameObject:
@@ -271,6 +271,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   torre: {fileID: 9169402550585042705, guid: 5d8a8eadbc9c27c4096d795507e62b4f, type: 3}
-  y: -0.2
-  x: -0.5
+  y: -0.5
+  x: -1
   letrero: {fileID: 3961999456136388001}

@@ -7,11 +7,11 @@ public class T_Arcos : LogicaTorres
     [SerializeField]
     private GameObject letrero;
 
-    public override void OnMouseDown()
+    protected override void OnMouseDown()
     {
-        if(Moneda.Instancia.Dinero>=50)
+        if(Moneda.Instancia.Dinero>=20)
         {
-            Moneda.Instancia.Dinero -= 50;
+            Moneda.Instancia.Dinero -= 20;
             
             Moneda.Instancia.Compro = true;
             GameObject temp;

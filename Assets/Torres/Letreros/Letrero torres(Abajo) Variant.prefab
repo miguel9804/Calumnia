@@ -72,6 +72,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrera
       objectReference: {fileID: 0}
+    - target: {fileID: 8622136578745333570, guid: 6f725315e96a9ed419e88f149aab1957,
+        type: 3}
+      propertyPath: y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7124006097799916978, guid: 6f725315e96a9ed419e88f149aab1957,
+        type: 3}
+      propertyPath: y
+      value: -0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 1267483666693158971, guid: 6f725315e96a9ed419e88f149aab1957,
         type: 3}
       propertyPath: torre
@@ -81,12 +91,12 @@ PrefabInstance:
     - target: {fileID: 1267483666693158971, guid: 6f725315e96a9ed419e88f149aab1957,
         type: 3}
       propertyPath: y
-      value: -0.1
+      value: -0.8
       objectReference: {fileID: 0}
     - target: {fileID: 1267483666693158971, guid: 6f725315e96a9ed419e88f149aab1957,
         type: 3}
       propertyPath: x
-      value: -0.4
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f725315e96a9ed419e88f149aab1957, type: 3}

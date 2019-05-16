@@ -6,7 +6,7 @@ using UnityEngine;
 {
     protected override void Start()
     {
-        Vida = 25;
+        Vida = 50;
         vel = 1.2f;
         daño = 8;
         tiempo_ataque = 6f;
@@ -69,7 +69,7 @@ using UnityEngine;
         if (Vida <= 0)
         {
             Muerte();
-
+            Moneda.Instancia.Dinero += 10;
         }
 
     }

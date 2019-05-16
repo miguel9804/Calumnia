@@ -73,6 +73,7 @@ public class Demonio_Rapido : Enemigos
         if (Vida <= 0)
         {
             Muerte();
+            Moneda.Instancia.Dinero += 3;
         }
 
 
@@ -81,7 +82,6 @@ public class Demonio_Rapido : Enemigos
     {
         int n;
         n = Random.Range(1, 4);
-        Debug.Log(n);
         for(int i=0; i<n;i++)
         {
             GameObject crear = Instantiate(hijos, this.transform.position, this.transform.rotation);

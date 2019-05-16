@@ -12,7 +12,6 @@ public class Obstaculo : MonoBehaviour
     private bool activar;
     private Barrera barrera;
     private float seg;
-    private const string ENEMIGO = "Enemigo";
 
 
     private void Start()
@@ -53,15 +52,7 @@ public class Obstaculo : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag.Equals(ENEMIGO))
-        {
-            if (activar == true)
-            {
-                Crear();
-                seg = 0;
-            }
-        }
-        if (collision.gameObject.tag.Equals("Demonio rapido"))
+        if (collision.gameObject.tag.Equals("Enemigo")|| collision.gameObject.tag.Equals("Demonio rapido"))
         {
             if (activar == true)
             {
